@@ -111,5 +111,5 @@ spider('', url, deep, graf, url_table, id_table, 'https')
 
 connection = create_connection('postgres', 'postgres', 'data4ril',
                                'database-2.cth6xwztbzlm.us-east-1.rds.amazonaws.com', 5432)
-insert_database(connection, "INSERT INTO id_url VALUES", list(id_table.items()))
-insert_database(connection, "INSERT INTO graf  VALUES", create_list(graf))
+insert_database(connection, "INSERT INTO nodes VALUES", list(id_table.items()))
+insert_database(connection, "INSERT INTO edges  VALUES", create_list(graf))
